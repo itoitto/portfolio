@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  practice_name: 
+  practice_content: MyText
+
+two:
+  practice_name: 
+  practice_content: MyText

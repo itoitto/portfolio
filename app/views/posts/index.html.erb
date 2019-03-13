@@ -1,0 +1,8 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+<%@posts.each do |post|%>
+  <%= post.practice_date%>
+  <%= post.practice_name%>
+  <%= post.practice_content%>
+  <%=link_to("詳細","/posts/#{post.id}")%>
+<%end%>

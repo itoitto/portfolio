@@ -4,5 +4,5 @@
 <%= @post.practice_name%>
 <%= @post.practice_content%>
 <%=link_to("戻る","/posts/index")%>
-<%=link_to("編集","/")%>
-<%=link_to("削除","/")%>
+<%=link_to("編集","/posts/#{@post.id}/edit")%>
+<%=link_to("削除","/posts/#{@post.id}/destroy")%>

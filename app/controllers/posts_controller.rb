@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.last(3)
+    @posts = Post.limit(3).order(created_at: :desc)
   end
 
   def show
@@ -16,4 +16,16 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
 
+  def edit
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def update
+    @post = Post.find_by(id: params[:id])
+    @post.practice_date = params[:date]
+    @post.practice_name = params[:title]
+    @post.practice_content = params[:content]
+    @post.save
+    redirect_to("/posts/index")
+  end
 end

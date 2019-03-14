@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get "/" => "home#top"
   get 'posts/index'
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"
@@ -20,6 +20,5 @@ Rails.application.routes.draw do
   #   get "sign_in", :to => "users/sessions#new"
   #   get "sign_out", :to => "users/sessions#destroy"
   # end
-  get "/" => "home#top"
 
 end

@@ -12,8 +12,13 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(practice_name: params[:title],practice_content: params[:content],practice_date: params[:date])
-    @post.save
-    redirect_to("/posts/index")
+    if @post.save
+      flash[:notice] = "投稿が完了しました。"
+      redirect_to("/posts/index")
+    else
+      flash[:notice] = "投稿に失敗しました。"
+      render("posts/new")
+    end
   end
 
   def edit

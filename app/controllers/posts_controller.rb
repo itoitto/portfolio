@@ -30,8 +30,13 @@ class PostsController < ApplicationController
     @post.practice_date = params[:date]
     @post.practice_name = params[:title]
     @post.practice_content = params[:content]
-    @post.save
-    redirect_to("/posts/index")
+    if @post.save
+      flash[:notice] = "更新に成功しました。"
+      redirect_to("/posts/index")
+    else
+      flash[:notice] = "更新に失敗しました。"
+      render("posts/edit")
+    end
   end
 
   def destroy

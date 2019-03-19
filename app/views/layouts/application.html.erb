@@ -12,7 +12,17 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%=link_to("練習投稿","/posts/new")%>
+    <ul>
+      <li>
+        <%=link_to("ログイン","/users/sign_in")%>
+      </li>
+      <li>
+        <%=link_to("練習投稿","/posts/index")%>
+      </li>
+      <li>
+        <%=link_to("ログアウト","/users/sign_out")%>
+      </li>
+    </ul>
     <%= yield %>
   </body>
 </html>

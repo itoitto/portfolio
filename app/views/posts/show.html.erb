@@ -1,8 +1,36 @@
-<h1>Posts#show</h1>
+<%= stylesheet_link_tag 'posts', :media => "all" %>
+<h1 class="h1_title">練習詳細ページ</h1>
 
-<%= @post.practice_date%>
-<%= @post.practice_name%>
-<%= @post.practice_content%>
-<%=link_to("戻る","/posts/index")%>
-<%=link_to("編集","/posts/#{@post.id}/edit")%>
-<%=link_to("削除","/posts/#{@post.id}/destroy",{method:"post"})%>
+<div class="container_oya">
+  <div class="container">
+    <div class="show_outside">
+      <div class="show_practice_date">
+        練習日<br>
+        <%= @post.practice_date%>
+      </div>
+      <div class="show_practice_name">
+        タイトル<br>
+        <%= @post.practice_name%>
+      </div>
+      <div class="show_timestamp">
+        投稿日時<br>
+        <%= @post.updated_at%>
+      </div>
+      <div class="show_practice_content">
+        練習内容<br>
+        <%= @post.practice_content%>
+      </div>
+      <div class="show_button_group">
+        <div class="show_button_return">
+          <%=link_to("戻る","/posts/index", :style=>"color:#FFFFFF; text-decoration:none; vertical-align: middle;")%>
+        </div>
+        <div class="show_button_edit">
+          <%=link_to("編集","/posts/#{@post.id}/edit", :style=>"color:#FFFFFF; text-decoration:none; vertical-align: middle;")%>
+        </div>
+        <div class="show_button_delete">
+          <%=link_to("削除","/posts/#{@post.id}/destroy",{method:"post", :style=>"color:#FFFFFF; text-decoration:none; vertical-align:middle;"})%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

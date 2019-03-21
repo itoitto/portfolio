@@ -1,8 +1,25 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-<%@posts.each do |post|%>
-  <%= post.practice_date%>
-  <%= post.practice_name%>
-  <%= post.practice_content%>
-  <%=link_to("詳細","/posts/#{post.id}")%>
-<%end%>
+<%= stylesheet_link_tag 'posts', :media => "all" %>
+<h1 class="h1_title">練習履歴一覧</h1>
+<div class="container_oya">
+  <div class="container">
+      <%@posts.each do |post|%>
+        <div class="post_index">
+          <div class="practice_date">
+            練習日　：
+            <%= post.practice_date%>
+          </div>
+          <div class="practice_name">
+            タイトル：
+            <%= post.practice_name%>
+          </div>
+          <div class="practice_content">
+            練習内容：
+            <%= post.practice_content%>
+          </div>
+          <div class="edit_button">
+            <%=link_to("▼詳細を見る","/posts/#{post.id}")%>
+          </div>
+        </div>
+      <%end%>
+  </div>
+</div>

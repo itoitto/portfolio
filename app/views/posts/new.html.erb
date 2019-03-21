@@ -1,9 +1,25 @@
-<%=form_tag("/posts/create")do%>
-  <p>練習日</p>
-  <textarea name="date"></textarea>
-  <p>タイトル</p>
-  <textarea name="title"></textarea>
-  <p>練習内容</p>
-  <textarea name="content"></textarea>
-  <input type="submit" value="投稿">
-<%end%>
+<%= stylesheet_link_tag 'posts', :media => "all" %>
+<h1 class="h1_title">練習記録中・・・</h1>
+<div class="container_oya">
+  <div class="container">
+    <div class="new_outside">
+      <%=form_tag("/posts/create")do%>
+        <div class="new_practice_date">
+          練習日（入力形式：yyyy-mm-dd）<br>
+          <textarea name="date" class="date_textarea"></textarea>
+        </div>
+        <div class="new_practice_date">
+          タイトル<br>
+          <textarea name="title" class="title_textarea"></textarea>
+        </div>
+        <div class="new_practice_content">
+          練習内容<br>
+          <textarea name="content" class="content_textarea"></textarea>
+        </div>
+        <div class="new_button_group">
+          <input class="new_button" type="submit" value="投稿">
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>

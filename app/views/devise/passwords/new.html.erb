@@ -1,17 +1,29 @@
 <%= stylesheet_link_tag 'devise', :media => "all" %>
-<h2>Forgot your password?</h2>
+<h1 class="title">ログインパスワード再発行</h1>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="container_oya">
+  <div class="container">
+    <div class="login_outside">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="field">
+          <div class="email_label">
+            <%= f.label :email %><br />
+          </div>
+          <div class="email_input_outside">
+            <div class="email_input_inner">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "パスワード再発行" , class:'login_button'%>
+        </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

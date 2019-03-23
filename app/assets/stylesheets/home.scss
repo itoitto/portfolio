@@ -1,6 +1,10 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.home_position_setting{
+  margin-left: 10%;
+}
+
 .title_1{
   font-size: 45px;
   color: #5B839D;
@@ -9,4 +13,23 @@
 .title_2{
   font-size: 25px;
   color: #5B839D;
+}
+
+.home_signup_button{
+  background-color: #5B839D;
+  box-shadow: 0px 6px 8px 0px #BFBFBF;
+  height: 70px;
+  width: 200px;
+  font-size: 30px;
+  margin-top: 7px;
+  border-radius: 10px;
+  text-align: center;
+  color:#FFFFFF;
+  font-weight: bold;
+  display: flex;
+}
+
+.home_signup_button a{
+  display: block;
+  margin: auto;
 }

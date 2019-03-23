@@ -14,7 +14,7 @@
           </div>
           <div class="practice_content">
             練習内容：
-            <%= post.practice_content%>
+            <%= truncate(post.practice_content, length: 15)%>
           </div>
           <div class="edit_button">
             <%=link_to("▼詳細を見る","/posts/#{post.id}")%>

@@ -45,7 +45,7 @@
   margin: auto;
 }
 
-#user_email,#user_password{
+#user_email,#user_password,#user_password_confirmation{
   width:350px;
   font-size: 20px;
   margin-bottom: 20px;
@@ -74,12 +74,12 @@
   color: #FFFFFF;
 }
 
-.link_new,.link_forget_password{
+.link_new,.link_forget_password,.link_login{
   margin-left: 75px;
   margin-top: 10px;
 }
 
-.link_new a,.link_forget_password a{
+.link_new a,.link_forget_password a,.link_login a{
   color: #707070;
   text-decoration: none;
 }

@@ -1,0 +1,85 @@
+.title{
+  color: #707070;
+  text-align: center;
+}
+
+.container_oya{
+  display: flex;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  background-color: #FFFFFF;
+  border-top: 5px solid #12ADFF;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  left: 200px;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.login_outside{
+  background-color: #FEFFF8;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 350px;
+}
+
+/* new */
+.email_label,.password_label{
+  text-align: center;
+  font-size: 25px;
+  color: #707070;
+}
+
+.email_input_outside,.password_input_outside{
+  display: flex;
+}
+
+.email_input_inner,.password_input_inner{
+  margin: auto;
+}
+
+#user_email,#user_password{
+  width:350px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#user_remember_me{
+  margin-left: 72px;
+}
+
+.actions{
+  display: flex;
+  font-size: 41px;
+  height: 50px;
+
+}
+
+.login_button{
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  width: 350px;
+  height: 50px;
+  border: solid 1px;
+  background-color: #84BCE0;
+  color: #FFFFFF;
+}
+
+.link_new,.link_forget_password{
+  margin-left: 75px;
+  margin-top: 10px;
+}
+
+.link_new a,.link_forget_password a{
+  color: #707070;
+  text-decoration: none;
+}

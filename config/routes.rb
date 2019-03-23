@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  get "/" => "home#top"
+  devise_for :users
+  devise_scope :user do
+  get "uses/sign_in", :to => "devise/sessions#new"
+  get "users/sign_out", :to => "devise/sessions#destroy"
+  end
+  root 'home#top'
+  # get "/" => "home#top"
   get 'posts/index'
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"
@@ -9,7 +15,6 @@ Rails.application.routes.draw do
   get "posts/:id" => "posts#show"
   get 'home/index'
   get 'home/authentication'
-  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # devise_for :users, :controllers => {
   # :registrations => 'users/registrations',

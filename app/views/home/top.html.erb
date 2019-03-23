@@ -1,9 +1,15 @@
-<h1 class="title_1">あなたの試合記録を見える化</h1>
-<h1 class="title_1">記録から繋がるSNS</h1>
-<h2 class="title_2">個人フットサルでの記録だったり、</h2>
-<h2 class="title_2">仲間内で組んだチームでの試合記録だったり、</h2>
-<h2 class="title_2">個人の練習記録としても活用できます。</h2>
-<h2 class="title_2">無料で始められる記録サイト</h2>
-<a href="contact_stab.html">
-  <button class="button_contact" type="submit" name="無料登録">To Contact</button>
-</a>
+<% if user_signed_in? %>
+  <h1 class="title_1">あなたの試合記録を見える化</h1>
+  <h1 class="title_1">記録から繋がるSNS</h1>
+  <h2 class="title_2">個人フットサルでの記録だったり、</h2>
+  <h2 class="title_2">仲間内で組んだチームでの試合記録だったり、</h2>
+  <h2 class="title_2">個人の練習記録としても活用できます。</h2>
+  <h2 class="title_2">無料で始められる記録サイト</h2>
+  <a href="contact_stab.html">
+    <button class="button_contact" type="submit" name="無料登録">To Contact</button>
+  </a>
+<% else %>
+  <h1 class="title_1">あなたの試合記録を見える化</h1>
+  <h1 class="title_1">記録から繋がるSNS</h1>
+  <h2 class="title_2">個人フットサルでの記録だったり、</h2>
+<% end %>

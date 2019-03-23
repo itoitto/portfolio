@@ -16,3 +16,35 @@
 body{
   background-color: #F4FFFE;
 }
+
+.header_line{
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 3px 0px #BFBFBF;
+}
+
+.ul_nav{
+  list-style: none;
+  overflow: hidden;
+}
+
+.list_group{
+  display: flex;
+}
+
+.list_nav{
+  float: left;
+  margin-right: 30px;
+}
+
+.list_nav a{
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.site_title{
+  text-align: center;
+  color: #5B839D;
+  font-size: 25px;
+  font-weight: bold;
+  vertical-align: middle;
+}

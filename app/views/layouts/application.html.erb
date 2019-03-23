@@ -10,22 +10,29 @@
   </head>
 
   <body>
+    <div class="header_line">
+      <ul class="ul_nav">
+        <div class="list_group">
+          <li class="list_nav">
+            <%=link_to("ログイン","/users/sign_in", :style=>"color:#707070;")%>
+          </li>
+          <li class="list_nav">
+            <%=link_to("練習投稿一覧","/posts/index", :style=>"color:#707070;")%>
+          </li>
+          <li class="list_nav">
+            <%=link_to("練習記録する","/posts/new", :style=>"color:#707070;")%>
+          </li>
+          <li class="list_nav">
+            <%=link_to("ログアウト","/users/sign_out", :style=>"color:#707070;")%>
+          </li>
+          <div class="site_title">
+            FutsaLog
+          </div>          
+        </div>
+      </ul>
+    </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <ul>
-      <li>
-        <%=link_to("ログイン","/users/sign_in")%>
-      </li>
-      <li>
-        <%=link_to("練習投稿一覧","/posts/index")%>
-      </li>
-      <li>
-        <%=link_to("練習記録する","/posts/new")%>
-      </li>
-      <li>
-        <%=link_to("ログアウト","/users/sign_out")%>
-      </li>
-    </ul>
     <%= yield %>
   </body>
 </html>

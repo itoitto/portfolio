@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag 'profile', :media => "all" %>
+<h1 class="h1_title">ユーザー情報編集中・・・</h1>
+
+<div class="container_oya">
+  <div class="container">
+    <div class="edit_outside">
+      <%=form_tag("/profile/#{@user.id}/update",{multipart: true})do%>
+        <div class="edit_practice_date">
+          メールアドレス<br>
+          <textarea name="email" class="email_textarea"><%= @user.email%></textarea>
+        </div>
+        <div class="edit_practice_name">
+          ユーザー名<br>
+          <textarea name="username" class="username_textarea"><%= @user.username%></textarea>
+        </div>
+        <div class="edit_practice_content">
+          パスワード<br>
+          <textarea name="password" class="password_textarea"><%= @user.password%></textarea>
+        </div>
+        <div class="edit_practice_content">
+          プロフィール画像<br>
+          <input name="name" type="file">
+        </div>
+        <div class="edit_button_group">
+          <input class="update_button" type="submit" value="更新">
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>

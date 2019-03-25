@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  #devise_for :users, controllers: {
+  # registrations: 'users/registrations'
+  # }
   devise_scope :user do
-  get "uses/sign_in", :to => "devise/sessions#new"
+  get "users/sign_in", :to => "devise/sessions#new"
   get "users/sign_out", :to => "devise/sessions#destroy"
   end
   root 'home#top'
   # get "/" => "home#top"
+  get "home/user_info" => "home#user_info"
   get 'posts/index'
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"

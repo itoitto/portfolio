@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.limit(3).order(created_at: :desc)
+    @posts = Post.where(user_id: current_user.id).limit(3).order(created_at: :desc)
+    #@posts = Post.limit(3).order(created_at: :desc)
   end
 
   def show

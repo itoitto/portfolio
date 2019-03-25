@@ -33,3 +33,52 @@
   display: block;
   margin: auto;
 }
+
+.h1_title{
+  color: #707070;
+  text-align: center;
+}
+.container_oya{
+  display: flex;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  background-color: #FFFFFF;
+  border-top: 5px solid #12ADFF;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  left: 200px;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.user_info_outside{
+  background-color: #FEFFF8;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 250px;
+}
+
+.new_user_name,.new_user_pic,.new_button_group{
+  width: 480px;
+  margin: auto;
+  border-top: 2px solid #12ADFF;
+}
+
+.user_name_textarea,.user_pic_textarea{
+  width: 200px;
+  font-size: 15px;
+}
+
+.new_button_group{
+  height: 55px;
+  margin: auto;
+  display: flex;
+  justify-content:space-around;
+}

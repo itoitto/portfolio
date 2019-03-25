@@ -6,4 +6,9 @@ class HomeController < ApplicationController
 
   def authentication
   end
+
+  def user_info 
+
+  end
+
 end

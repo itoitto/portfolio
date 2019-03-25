@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag 'home', :media => "all" %>
+<h1 class="h1_title">ユーザー情報登録</h1>
+<div class="container_oya">
+  <div class="container">
+    <div class="user_info_outside">
+      <%=form_tag("/home/create")do%>
+        <div class="new_user_name">
+          ユーザー名<br>
+          <textarea name="user_name" class="user_name_textarea"></textarea>
+        </div>
+        <div class="new_user_pic">
+          画像<br>
+          <textarea name="user_pic" class="user_pic_textarea"></textarea>
+        </div>
+        <div class="new_button_group">
+          <input class="new_button" type="submit" value="登録">
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>

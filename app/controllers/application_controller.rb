@@ -1,19 +1,22 @@
 class ApplicationController < ActionController::Base
 
+  protect_from_forgery with: :exception
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    added_attrs = [ :email, :username, :password, :password_confirmation ]
+    devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
+    devise_parameter_sanitizer.permit :account_update, keys: added_attrs
+    devise_parameter_sanitizer.permit :sign_in, keys: added_attrs
+  end
+
   private
 
   # ログイン後のリダイレクト先
   def after_sign_in_path_for(resource_or_scope)
     posts_index_path(resource_or_scope)
-  end
-
-  # サインアップ後（新規登録後）のリダイレクト先
-  def after_sign_up_path_for(resource)
-    users_user_info_path
-  end
-
-  def after_inactive_sign_up_path_for(resource)
-    users_user_info_path
   end
 
   # ログアウト後のリダイレクト先

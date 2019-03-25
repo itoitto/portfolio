@@ -2,8 +2,8 @@
 <h1 class="title">新規登録</h1>
 
 <div class="container_oya">
-  <div class="container">
-    <div class="login_outside">
+  <div class="container_new">
+    <div class="login_outside_new">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -14,6 +14,17 @@
           <div class="email_input_outside">
             <div class="email_input_inner">
               <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="user_name_label">
+            <%= f.label :ユーザー名 %><br />
+          </div>
+          <div class="user_name_input_outside">
+            <div class="user_name_input_inner">
+              <%= f.text_field :username, class: "form-control" %>
             </div>
           </div>
         </div>

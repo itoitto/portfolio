@@ -13,6 +13,9 @@
     <div class="header_line">
       <ul class="ul_nav">
         <div class="list_group">
+          <div class="site_title">
+            <%= "FutsaLog"%>
+          </div>
           <li class="list_nav">
             <%=link_to("ログイン","/users/sign_in", :style=>"color:#707070;")%>
           </li>
@@ -26,14 +29,13 @@
             <%=link_to("ログアウト","/users/sign_out", :style=>"color:#707070;")%>
           </li>
           <% if user_signed_in? %>
+          <div class="user_name">
             <li class="list_nav">
-              <%= link_to "ユーザー名：#{@user.username}", :controller => "profile", :action => "edit" , :style=>"color:#707070;"%>
+              <%= "ユーザー名：#{@user.username}"%>
             </li>
+          </div>
           <%end%>
 
-          <div class="site_title">
-            FutsaLog
-          </div>
         </div>
       </ul>
     </div>
@@ -41,4 +43,7 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
+  <footer class="footer_deco">
+    <%="©️salog 201903"%>
+  </footer>
 </html>

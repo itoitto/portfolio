@@ -34,6 +34,7 @@ body{
 .list_nav{
   float: left;
   margin-right: 30px;
+  color: #707070;
 }
 
 .list_nav a{
@@ -46,5 +47,20 @@ body{
   color: #5B839D;
   font-size: 25px;
   font-weight: bold;
+  vertical-align: middle;
+  padding-right: 20px;
+  margin: 0 0 10 10 ;
+}
+
+.user_name{
+  margin:0 0 0 auto;
+}
+
+.footer_deco{
+  text-align: center;
+  box-shadow: 0 -3px 3px #BFBFBF;
+  height: 60px;
+  padding-top: 20px;
+  margin-top: 100px;
   vertical-align: middle;
 }

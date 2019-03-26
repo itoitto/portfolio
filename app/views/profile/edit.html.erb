@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'profile', :media => "all" %>
 <h1 class="h1_title">ユーザー情報編集中・・・</h1>
-
+<%=current_user.id%>
 <div class="container_oya">
   <div class="container">
     <div class="edit_outside">
@@ -15,14 +15,14 @@
         </div>
         <div class="edit_practice_content">
           パスワード<br>
-          <textarea name="password" class="password_textarea"><%= @user.password%></textarea>
+          <textarea name="password" class="password_textarea"></textarea>
         </div>
         <div class="edit_practice_content">
           プロフィール画像<br>
-          <input name="name" type="file">
+          <input name="user_pic" type="file">
         </div>
         <div class="edit_button_group">
-          <input class="update_button" type="submit" value="更新">
+          <input class="user_update_button" type="submit" value="更新">
         </div>
       <%end%>
     </div>

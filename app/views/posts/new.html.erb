@@ -1,5 +1,9 @@
 <%= stylesheet_link_tag 'posts', :media => "all" %>
-<h1 class="h1_title">練習記録中・・・</h1>
+<%if flash[:notice]%>
+  <h1 class="h1_title">練習記録中・・・</h1>
+<%else%>
+  <h1 class="h1_title_no_flash">練習記録中・・・</h1>
+<%end%>
 <div class="container_oya">
   <div class="container">
     <div class="new_outside">

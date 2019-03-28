@@ -1,6 +1,13 @@
 <%= stylesheet_link_tag 'posts', :media => "all" %>
-<h1 class="h1_title">練習詳細ページ</h1>
-
+<%if flash[:notice]%>
+  <div class="h1_title">
+    <h1>練習詳細ページ</h1>
+  </div>
+<%else%>
+  <div class="h1_title_no_flash">
+    <h1>練習詳細ページ</h1>
+  </div>
+<%end%>
 <div class="container_oya">
   <div class="container">
     <div class="show_outside">
@@ -14,7 +21,7 @@
       </div>
       <div class="show_timestamp">
         投稿日時<br>
-        <%= @post.updated_at%>
+        <%= @post.updated_at.strftime("%Y-%m-%d %H:%M")%>
       </div>
       <div class="show_practice_content">
         練習内容<br>

@@ -1,5 +1,13 @@
 <%= stylesheet_link_tag 'devise', :media => "all" %>
-<h1 class="title">新規登録</h1>
+<%if flash[:notice]%>
+  <div class="title">
+    <h1>新規登録</h1>
+  </div>
+<%else%>
+  <div class="title_no_flash">
+    <h1>新規登録</h1>
+  </div>
+<%end%>
 
 <div class="container_oya">
   <div class="container_new">

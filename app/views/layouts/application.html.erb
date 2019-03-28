@@ -16,31 +16,35 @@
           <div class="site_title">
             <%= "FutsaLog"%>
           </div>
-          <li class="list_nav">
-            <%=link_to("ログイン","/users/sign_in", :style=>"color:#707070;")%>
-          </li>
+          <% if !user_signed_in? %>
+            <li class="list_nav">
+              <%=link_to("ログイン","/users/sign_in", :style=>"color:#707070;")%>
+            </li>
+          <%end%>
+          <% if user_signed_in? %>
           <li class="list_nav">
             <%=link_to("練習投稿一覧","/posts/index", :style=>"color:#707070;")%>
-          </li>
-          <li class="list_nav">
-            <%=link_to("練習記録する","/posts/new", :style=>"color:#707070;")%>
-          </li>
-          <li class="list_nav">
-            <%=link_to("ログアウト","/users/sign_out", :style=>"color:#707070;")%>
-          </li>
-          <% if user_signed_in? %>
-          <div class="user_name">
-            <li class="list_nav">
-              <%= "ユーザー名：#{@user.username}"%>
             </li>
-          </div>
+            <li class="list_nav">
+              <%=link_to("練習記録する","/posts/new", :style=>"color:#707070;")%>
+            </li>
+            <li class="list_nav">
+              <%=link_to("ログアウト","/users/sign_out", :style=>"color:#707070;")%>
+            </li>
+            <div class="user_name">
+              <li class="list_nav">
+                <%= "ユーザー名：#{@user.username}"%>
+              </li>
+            </div>
           <%end%>
 
         </div>
       </ul>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if flash[:notice]%>
+      <p class="flash"><%= notice %></p>
+      <p class="field"><%= alert %></p>
+    <%end%>
     <%= yield %>
   </body>
   <footer class="footer_deco">

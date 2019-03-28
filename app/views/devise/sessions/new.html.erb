@@ -1,6 +1,13 @@
 <%= stylesheet_link_tag 'devise', :media => "all" %>
-<h1 class="title">ログイン</h1>
-
+<%if flash[:notice]%>
+  <div class="title">
+    <h1>ログイン</h1>
+  </div>
+<%else%>
+  <div class="title_no_flash">
+    <h1>ログイン</h1>
+  </div>
+<%end%>
 <div class="container_oya">
   <div class="container">
     <div class="login_outside">

@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+開発環境
+rails5.2.1
+ruby2.5.1
 
-Things you may want to cover:
+アプリ概要
+フットサルをやっている方向けの練習を記録するサイトです。
 
-* Ruby version
+機能概要
+ログイン、ログアウト機能
+deviseを用いた実装
 
-* System dependencies
+練習一覧表示機能
 
-* Configuration
+練習投稿機能
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+練習記録編集(削除)機能

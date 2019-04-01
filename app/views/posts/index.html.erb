@@ -8,8 +8,28 @@
     <h1>練習履歴一覧</h1>
   </div>
 <%end%>
+
+
 <div class="container_oya">
-  <div class="container">
+  <%if @posts.count == 0 || @posts.count == 1 || @posts.count % 5 == 1 %>
+    <div class="container_index_0_1">
+  <%end%>
+  <%if @posts.count == 2 || @posts.count % 5 == 2 %>
+    <div class="container_index_2">
+  <%end%>
+  <%if @posts.count == 3 || @posts.count % 5 == 3 %>
+    <div class="container_index_3">
+  <%end%>
+  <%if @posts.count == 4 || @posts.count % 5 == 4 %>
+    <div class="container_index_4">
+  <%end%>
+  <%if @posts.count == 5 || @posts.count % 5 == 0 %>
+    <div class="container_index_5">
+  <%end%>
+
+    <%if @posts.count == 0 %>
+      <%="投稿がありません。"%>
+    <%else%>
       <%@posts.each do |post|%>
         <div class="post_index">
           <div class="practice_date">
@@ -27,7 +47,9 @@
           <div class="edit_button">
             <%=link_to("▼詳細を見る","/posts/#{post.id}")%>
           </div>
-        </div>
-      <%end%>
-  </div>
-</div>
+        </div><!--post_index-->
+        <%end%><!--@posts.each do |post|-->
+      <%end%><!--if @posts.count == 0-->
+      <%= paginate @posts -%>
+  </div><!--container_index_XX-->
+</div><!--container_oya-->

@@ -23,7 +23,7 @@
   <%if @posts.count == 4 || @posts.count % 5 == 4 %>
     <div class="container_index_4">
   <%end%>
-  <%if @posts.count == 5 || @posts.count % 5 == 0 %>
+  <%if @posts.count == 5 || (@posts.count % 5 == 0 && @posts.count != 0) %>
     <div class="container_index_5">
   <%end%>
 

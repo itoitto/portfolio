@@ -45,7 +45,7 @@
   box-shadow: 0px 3px 6px 0px #BFBFBF;
   left: 200px;
   width: 600px;
-  height: 550px;
+  height: 650px;
   margin: auto;
   flex-direction: column;
 }
@@ -57,20 +57,20 @@
   margin-top: 40px;
   margin-bottom: 30px;
   width: 500px;
-  height: 500px;
+  height: 600px;
 }
 
-.email_label,.password_label,.user_name_label,.user_pic_label{
+.email_label,.password_label,.user_name_label,.user_pic_label,.userpic_label{
   text-align: center;
   font-size: 25px;
   color: #707070;
 }
 
-.email_input_outside,.password_input_outside,.user_name_input_outside,.pic_input_outside{
+.email_input_outside,.password_input_outside,.user_name_input_outside,.pic_input_outside,.userpic_input_outside{
   display: flex;
 }
 
-.email_input_inner,.password_input_inner,.user_name_input_inner,.pic_input_inner{
+.email_input_inner,.password_input_inner,.user_name_input_inner,.pic_input_inner,.userpic_input_inner{
   margin: auto;
 }
 
@@ -84,6 +84,15 @@
   width:350px;
   font-size: 10px;
   margin-bottom: 20px;
+}
+
+#user_image_name{
+  width:350px;
+  margin-top: 20px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+  vertical-align: middle;
 }
 
 #user_remember_me{

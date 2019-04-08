@@ -4,7 +4,7 @@
 .h1_title{
   color: #707070;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .h1_title_no_flash{
@@ -12,7 +12,64 @@
   text-align: center;
   margin-top: 20px;
 }
+// 00_start ユーザー情報表示CSS
+.user_pic_space_no_flash{
+  margin-top: 20px;
+}
 
+.user_profile_oya{
+  display: flex;
+  width: 100%;
+}
+
+.user_container{
+  display: flex;
+  background-color: #FFFFFF;
+  border-top: 5px solid #12ADFF;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  left: 200px;
+  width: 600px;
+  height: 250px;
+  margin: auto;
+  margin-bottom: 100px;
+  flex-direction: column;
+}
+
+.user_index{
+  background-color: #FEFFF8;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 150px;
+  vertical-align: auto;
+  display: flex;
+  align-items: center;
+}
+
+.user_icon_image {
+  width: 100px;
+  height: 100px;
+  //サイズ指定
+  border-radius: 100px;
+  //画像を丸くする
+  object-fit: cover;
+  //タテヨコ比を変えないままトリミング
+}
+
+.user_index_icon{
+  margin-left: 50px;
+}
+
+.user_index_name{
+  margin-left: 50px;
+}
+
+// 00_end ユーザー情報表示CSS
+
+
+// 01_start 練習情報表示
 .container_oya{
   display: flex;
   width: 100%;
@@ -278,3 +335,5 @@
   padding: 0;
   text-decoration: none;
 }
+
+// 01_end 練習情報表示

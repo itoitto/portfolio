@@ -1,14 +1,30 @@
 <%= stylesheet_link_tag 'posts', :media => "all" %>
 <%if flash[:notice]%>
   <div class="h1_title">
-    <h1>練習履歴一覧</h1>
+    <h1>ユーザー情報</h1>
   </div>
 <%else%>
   <div class="h1_title_no_flash">
-    <h1>練習履歴一覧</h1>
+    <h1>ユーザー情報</h1>
   </div>
 <%end%>
 
+<div class="user_profile_oya">
+  <div class="user_container">
+    <div class="user_index">
+      <div class="user_index_icon">
+        <img src=<%= @user.image_name %> class = "user_icon_image">
+      </div>
+      <div class="user_index_name">
+        <%="ユーザー名：#{@user.username}"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="h1_title">
+  <h1>練習履歴一覧</h1>
+</div>
 
 <div class="container_oya">
   <%if @posts.count == 0 || @posts.count == 1 || @posts.count % 5 == 1 %>

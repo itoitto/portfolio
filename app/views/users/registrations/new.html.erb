@@ -6,7 +6,7 @@
     <div class="login_outside_new">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
-
+        <!--メールアドレス入力-->
         <div class="field">
           <div class="email_label">
             <%= f.label :email %><br />
@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-
+        <!--ユーザー名入力-->
         <div class="field">
           <div class="user_name_label">
             <%= f.label :ユーザー名 %><br />
@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-
+        <!--パスワード入力-->
         <div class="field">
           <div class="password_label">
             <%= "パスワード" %>
@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-
+        <!--パスワード確認用入力-->
         <div class="field">
           <div class="password_label">
             <%= f.label :password_confirmation %><br />
@@ -53,7 +53,18 @@
             </div>
           </div>
         </div>
-
+        <!--画像ファイル選択-->
+        <div class="field">
+          <div class="userpic_label">
+            <%= f.label :ユーザープロフィール画像 %><br/>
+          </div>
+          <div class="userpic_input_outside">
+            <div class="userpic_input_inner">
+              <%= f.file_field :image_name %>
+            </div>
+          </div>
+        </div>
+        <!--登録ボタン-->
         <div class="actions">
           <%= f.submit "登録" , class:'login_button'%>
         </div>

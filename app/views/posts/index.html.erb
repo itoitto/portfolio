@@ -13,7 +13,12 @@
   <div class="user_container">
     <div class="user_index">
       <div class="user_index_icon">
-        <img src=<%= @user.image_name %> class = "user_icon_image">
+        <!--画像登録判定-->
+        <%if @user.image_name == "default.jpg"%>
+          <img src="/image/default.jpg" class = "user_icon_image">
+        <%else%>
+          <img src=<%= @user.image_name %> class = "user_icon_image">
+        <%end%>
       </div>
       <div class="user_index_name">
         <%="ユーザー名：#{@user.username}"%>

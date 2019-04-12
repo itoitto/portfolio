@@ -37,6 +37,53 @@
   height: 350px;
 }
 
+/* password */
+.container_password_new{
+  display: flex;
+  background-color: #FFFFFF;
+  border-top: 5px solid #12ADFF;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  left: 200px;
+  width: 600px;
+  height: 350px;
+  margin: auto;
+  flex-direction: column;
+}
+
+/** 登録エラー時のみ **/
+.container_password_new_err{
+  display: flex;
+  background-color: #FFFFFF;
+  border-top: 5px solid #12ADFF;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  left: 200px;
+  width: 600px;
+  height: 520px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.password_outside_new{
+  background-color: #FEFFF8;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 300px;
+}
+
+/* 登録エラー時のみ */
+.password_outside_new_err{
+  background-color: #FEFFF8;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 470px;
+}
+
 /* new */
 .container_new{
   display: flex;
@@ -50,6 +97,19 @@
   flex-direction: column;
 }
 
+/* 登録エラー時のみ */
+.container_new_err{
+  display: flex;
+  background-color: #FFFFFF;
+  border-top: 5px solid #12ADFF;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  left: 200px;
+  width: 600px;
+  height: 820px;
+  margin: auto;
+  flex-direction: column;
+}
+
 .login_outside_new{
   background-color: #FEFFF8;
   box-shadow: 0px 3px 6px 0px #BFBFBF;
@@ -58,6 +118,17 @@
   margin-bottom: 30px;
   width: 500px;
   height: 600px;
+}
+
+/* 登録エラー時のみ */
+.login_outside_new_err{
+  background-color: #FEFFF8;
+  box-shadow: 0px 3px 6px 0px #BFBFBF;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 500px;
+  height: 770px;
 }
 
 .email_label,.password_label,.user_name_label,.user_pic_label,.userpic_label{
@@ -99,6 +170,17 @@
   margin-left: 72px;
 }
 
+#error_explanation{
+  background-color: #FFC9FD;
+  color: red;
+}
+
+#error_explanation h2{
+  padding-top: 5px;
+  padding-left: 10px;
+  margin-top: 0px;
+}
+
 .actions{
   display: flex;
   font-size: 41px;
@@ -106,7 +188,7 @@
 
 }
 
-.login_button{
+.login_button,.password_button{
   margin: auto;
   margin-top: 0;
   margin-bottom: 0;

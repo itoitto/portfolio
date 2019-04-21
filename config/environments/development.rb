@@ -14,6 +14,12 @@ Rails.application.configure do
 
   config.web_console.whitelisted_ips = '0.0.0.0/0'
 
+  # gem safe_yaml警告文を非表示にする
+  require 'safe_yaml'
+
+  # Do this before loading any YAML
+  SafeYAML::OPTIONS[:default_mode] = :safe
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
@@ -33,7 +39,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # config.action_mailer.perform_caching = false
   config.action_mailer.perform_caching = true
@@ -66,5 +72,18 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # mailer setting
-  config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = {
+  :enable_starttls_auto => true,
+  :address => 'smtp.gmail.com',
+  :port => 587,
+  :domain => 'smtp.gmail.com',
+  :user_name => Settings.gmail[:user_name], #gmailアドレス
+  :password => Settings.gmail[:password], #gmailパスワード
+  :authentication => 'plain',
+}
 end

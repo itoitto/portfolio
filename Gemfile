@@ -54,6 +54,18 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 
 gem 'carrierwave'
 
+# 定数管理用gem
+gem 'config'
+
+# 管理者権限用
+gem 'rails_admin', '~> 1.3'
+
+# 管理者権限gem インストールできるようにする
+gem 'safe_yaml'
+
+# 管理者権限設定gem
+gem 'cancancan', '~> 2.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -67,9 +79,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3', '~> 1.3.6'
-  # メール送信gem
-  gem 'letter_opener'
-  gem 'letter_opener_web'
+  # メール送信gem（メアド・パスワードを隠す機能）
+  # gem 'letter_opener'
+  # gem 'letter_opener_web'
 end
 
 group :test do

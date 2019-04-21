@@ -62,8 +62,19 @@
   margin-left: 50px;
 }
 
-.user_index_name{
+.user_info{
+  display: block;
+  width: 350px;
+}
+
+.user_index_name,.user_team,.user_point{
   margin-left: 50px;
+  color: #707070;
+  margin-top: 10px;
+}
+
+.user_setting{
+  margin-left: 70%;
 }
 
 // 00_end ユーザー情報表示CSS

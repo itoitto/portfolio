@@ -20,8 +20,19 @@
           <img src=<%= @user.image_name %> class = "user_icon_image">
         <%end%>
       </div>
-      <div class="user_index_name">
-        <%="ユーザー名：#{@user.username}"%>
+      <div class="user_info">
+        <div class="user_index_name">
+          <%="ユーザー名：#{@user.username}"%>
+        </div>
+        <div class="user_team">
+          <%="所属チーム："%>
+        </div>
+        <div class="user_point">
+          <%="月間得点数：点"%>
+        </div>
+        <div class="user_setting">
+          <%=link_to("▼設定変更","/member/#{@user.id}/edit")%>
+        </div>
       </div>
     </div>
   </div>

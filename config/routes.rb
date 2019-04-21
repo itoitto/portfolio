@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
 
   #devise_for :users, controllers: {
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
   end
   root 'home#top'
   # get "/" => "home#top"
+  get "member/:id/edit" => "member#edit"
+  post "member/:id/update" => "member#update"
   get "home/user_info" => "home#user_info"
   get 'posts/index'
   get "posts/new" => "posts#new"
@@ -22,9 +25,9 @@ Rails.application.routes.draw do
   get 'home/authentication'
   get "profile/edit" => "profile#edit"
   post "profile/:id/update" => "profile#update"
-  if Rails.env.development?
-    mount LetterOpenerWeb::Engine, at: '/letter_opener'
-  end
+  # if Rails.env.development?
+  #   mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  # end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # devise_for :users, :controllers => {
   # :registrations => 'users/registrations',

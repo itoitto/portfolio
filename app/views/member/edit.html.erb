@@ -1,0 +1,16 @@
+<%=form_tag("/member/#{@user.id}/update")do%>
+  <div class="">
+    <%="ユーザー名"%><%= text_field_tag "username", @user.username , {class: ""} %>
+  </div>
+  <!--パスワードの隠し / 入力値がない時の制御=>model-->
+  <div class="">
+    <%="パスワード"%><%= text_field_tag "password"%>
+  </div>
+  <div class="">
+    <%="パスワード（確認用）"%><%= text_field_tag "password_confirmation"%>
+  </div>
+  <!--変更ボタン実装-->
+  <div class="edit_button_group">
+    <input class="update_button" type="submit" value="更新">
+  </div>
+<%end%>

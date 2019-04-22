@@ -52,6 +52,7 @@ gem 'kaminari', '~> 0.17.0'
 
 gem 'kaminari-bootstrap', '~> 3.0.1'
 
+#画像ファイル登録
 gem 'carrierwave'
 
 # 定数管理用gem

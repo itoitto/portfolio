@@ -145,7 +145,7 @@
   margin: auto;
 }
 
-#user_email,#user_password,#user_password_confirmation,#user_username,#user_image{
+#user_email,#user_password,#user_password_confirmation,#user_current_password,#user_username,#user_image{
   width:350px;
   font-size: 20px;
   margin-bottom: 20px;
@@ -185,12 +185,29 @@
   display: flex;
   font-size: 41px;
   height: 50px;
-
 }
 
 .login_button,.password_button{
   margin: auto;
-  margin-top: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 20px;
+  width: 350px;
+  height: 50px;
+  border: solid 1px;
+  vertical-align: middle;
+  background-color: #84BCE0;
+  color: #FFFFFF;
+}
+
+.login_button{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.user_update_button{
+  margin: auto;
+  margin-top: 10px;
   margin-bottom: 0;
   font-size: 20px;
   width: 350px;
@@ -198,6 +215,29 @@
   border: solid 1px;
   background-color: #84BCE0;
   color: #FFFFFF;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.user_return_button{
+  font-size: 41px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  width: 350px;
+  height: 50px;
+  border: solid 1px;
+  background-color: #84BCE0;
+  color: #FFFFFF;
+  text-align: center;
+  display: block;
+}
+
+.user_return_button div{
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #fff;
 }
 
 .link_new,.link_forget_password,.link_login{

@@ -7,6 +7,7 @@ class MemberController < ApplicationController
     @user = User.find_by(id: current_user.id)
     @user.username = params[:username]
     @user.reset_password(params[:password] , params[:password_confirmation])
+    @user.image_name = params[:image_name]
     if @user.save
       sign_in(@user, bypass: true) if current_user.id == @user.id
       flash[:notice]="ユーザー情報の更新に成功しました。"
@@ -17,4 +18,5 @@ class MemberController < ApplicationController
       render("/member/:id/edit")
     end
   end
+
 end

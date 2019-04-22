@@ -9,6 +9,16 @@
   <div class="">
     <%="パスワード（確認用）"%><%= text_field_tag "password_confirmation"%>
   </div>
+  <div class="">
+    <div class="">
+      <%="ユーザープロフィール画像" %><br/>
+    </div>
+    <div class="">
+      <div class="">
+        <%= file_field :image_name, :file_name %>
+      </div>
+    </div>
+  </div>
   <!--変更ボタン実装-->
   <div class="edit_button_group">
     <input class="update_button" type="submit" value="更新">

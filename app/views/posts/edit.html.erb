@@ -10,12 +10,12 @@
     <div class="edit_outside">
       <%=form_tag("/posts/#{@post.id}/update")do%>
         <div class="edit_practice_date">
-          練習日（入力形式：yyyy-mm-dd）<br>
-          <textarea name="date" class="date_textarea"><%= @post.practice_date%></textarea>
+          練習日<br>
+          <%=date_field_tag("date", "p_date",value: @post.practice_date)%>
         </div>
         <div class="edit_practice_name">
           タイトル<br>
-          <textarea name="title" class="title_textarea"><%= @post.practice_name%></textarea>
+          <%= text_field_tag :title, @post.practice_name, :class => 'title_textarea' %>
         </div>
         <div class="edit_practice_content">
           練習内容<br>

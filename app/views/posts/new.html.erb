@@ -10,15 +10,15 @@
       <%=form_tag("/posts/create")do%>
         <div class="new_practice_date">
           練習日（入力形式：yyyy-mm-dd）<br>
-          <textarea name="date" class="date_textarea"></textarea>
+          <%=date_field_tag("date", "p_date")%>
         </div>
         <div class="new_practice_date">
           タイトル<br>
-          <textarea name="title" class="title_textarea"></textarea>
+          <%= text_field_tag :title, value=nil, :class => 'title_textarea' %>
         </div>
         <div class="new_practice_content">
           練習内容<br>
-          <textarea name="content" class="content_textarea"></textarea>
+          	<textarea name="content" class="content_textarea"></textarea>
         </div>
         <div class="new_button_group">
           <input class="new_button" type="submit" value="投稿">

@@ -27,6 +27,9 @@ Rails.application.routes.draw do
   get 'home/authentication'
   get "profile/edit" => "profile#edit"
   post "profile/:id/update" => "profile#update"
+  get "community/index" => "community#index"
+  get "community/new" => "community#new"
+  post "community/create" => "community#create"
   # if Rails.env.development?
   #   mount LetterOpenerWeb::Engine, at: '/letter_opener'
   # end

@@ -5,6 +5,9 @@ class PostsController < ApplicationController
     # @posts = Post.where(user_id: current_user.id).limit(3).order(created_at: :desc)
     # @posts = Post.limit(3).order(created_at: :desc)
     @posts = @posts.page(params[:page]).per(5)
+    @user = User.find_by(id: current_user.id)
+    @commumity = Community.find_by(id: @user.community_id)
+    p @community
   end
 
   def show

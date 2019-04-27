@@ -25,7 +25,8 @@
           <%="ユーザー名：#{@user.username}"%>
         </div>
         <div class="user_team">
-          <%="所属チーム："%>
+          <!--値が0の時は"所属なし"と表示する-->
+          <%="所属チーム：#{@commumity.community_name}"%>
         </div>
         <div class="user_point">
           <%="月間得点数：点"%>
@@ -58,7 +59,6 @@
   <%if @posts.count == 5 || (@posts.count % 5 == 0 && @posts.count != 0) %>
     <div class="container_index_5">
   <%end%>
-
     <%if @posts.count == 0 %>
       <%="投稿がありません。"%>
     <%else%>

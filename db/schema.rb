@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_18_015950) do
+ActiveRecord::Schema.define(version: 2019_04_27_041435) do
+
+  create_table "communities", force: :cascade do |t|
+    t.string "community_name", null: false
+    t.string "community_pic", default: "community_default_pic.jpg"
+    t.integer "member_count"
+    t.string "region", null: false
+    t.text "description", null: false
+    t.integer "daihyo_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "practice_name"
@@ -32,6 +43,7 @@ ActiveRecord::Schema.define(version: 2019_04_18_015950) do
     t.string "username"
     t.string "image_name", default: "default.jpg", null: false
     t.boolean "admin", default: false
+    t.integer "community_id", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

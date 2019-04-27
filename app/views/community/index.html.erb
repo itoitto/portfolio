@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'community', :media => "all" %>
+<%= render 'shared/community_helper' %>
+
+<%@community.each do |communities|%>
+  <div class="">
+    <%="コミュニティ名：#{communities.community_name}"%>
+  </div>
+  <div class="">
+    <%="地域：#{communities.region}"%>
+  </div>
+  <div class="">
+    <%="コミュニティ説明：#{communities.description}"%>
+  </div>
+  <div class="">
+    <img src=<%= communities.community_pic %>>
+  </div>
+<%end%>
+<%= paginate @community -%>
+<%="community index"%>
